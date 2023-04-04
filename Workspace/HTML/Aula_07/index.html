@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Sweet and Love</title>
+</head>
+
+<body>
+    <main>
+        <h2>Formulário de Satisfação Sweet and Love</h2>
+        <form class="Formulario" method="get" action="mail">
+            <fieldset class="border">
+                <input type="text" id="nome" required="required">
+                <label for="nome">Nome</label><br>
+                <input type="number" id="idade" max="126" min="0" required="required">
+                <label for="idade">Idade</label><br>
+                <input type="email" id="email" required="required">
+                <label for="email">Email</label><br>
+
+                <label for="">Você indicaria o estabelecimento à um amigo:</label><br>
+                <label for="sim">Sim</label>
+                <input type="radio" id="sim" name="radio" required="required"><br>
+                <label for="Não">Não</label>
+                <input type="radio" id="Não" name="radio" required="required"><br>
+
+                <label>O que você mais gostou sobre a Loja?</label><br>
+                <input type="checkbox" id="Doces" name="checkbox1">
+                <label for="Doces">Doces</label><br>
+                <input type="checkbox" id="Ambiente" name="checkbox2">
+                <label for="Ambiente">Ambiente</label><br>
+                <input type="checkbox" id="Delivery" name="checkbox3">
+                <label for="Delivery">Delivery / Entrega</label><br>
+                <input type="checkbox" id="Atendimento" name="checkbox4">
+                <label for="Atendimento">Atendimento</label><br>
+                <input type="checkbox" id="Valores" name="checkbox5">
+                <label for="Valores">Valores</label><br>
+
+                <label for="produto">Quais produto você comprou?</label ><br>
+                <textarea style="color:rgb(142, 255, 127);" name="produto" id="produto" cols="30" rows="10"></textarea>
+                <br>
+                <label for="local">Local de Compra</label>
+                <datalist id="local">
+                    <option value="Aclimação">Loja 1</option>
+                    <option value="Liberdade">Loja 2</option>
+                    <option value="Tatuapé">Loja 3</option>
+                    <option value="São Joaquim">Loja 4</option>
+                </datalist>
+                <input type="text" list="local">
+
+                <br>
+                <input type="submit">
+            </fieldset>
+        </form>
+    </main>
+    <h2>AAAAAAAAAAAAA</h2>
+</body>
+
+</html>

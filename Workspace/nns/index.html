@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      font-family: 'Arial Narrow Bold', sans-serif;
+    }
+
+    .header {
+      transition: all 0.5s;
+      padding: 5px 0px 5px 14px;
+      background: radial-gradient(circle, rgba(190,0,255,1) 0%, rgba(0,42,255,1) 21%, rgba(7,255,0,1) 52%, rgba(248,247,0,1) 69%, rgba(255,0,0,1) 100%);
+    }
+
+    .header:hover {
+      padding:15px;
+    }
+
+    .nav {
+      padding: 15px;
+      background-color: black;
+      color: whitesmoke;
+    }
+    
+    .nav a {
+      text-decoration: none;
+      left: -10px;
+      transition: all 0.5s;
+      color: white;
+    }
+
+    .nav nav ul li {
+      margin: 6px 0px 6px 0px;
+      display: block;
+    }
+
+    .nav #HOME:hover, #SOBRE:hover,  #CONTATOS:hover{
+      left: -20px;
+      border-radius: 5px;
+      padding: 6px;
+    }
+
+    .nav #HOME:hover {
+      left: 0px;
+      background-color: rgb(255, 0, 0);
+      color: rgb(100, 0, 0);
+    }
+
+    .nav #SOBRE:hover {
+      background-color: rgb(0, 255, 0);
+      color: rgb(0, 100, 0);
+    }
+
+    .nav #CONTATOS {
+      text-decoration: none;
+      margin: 6px 0px 6px 0px;
+      top: 0;
+      transition: all 0.5s;
+      color: white;
+    }
+
+    .nav #CONTATOS:hover {
+      background-color: rgb(0, 0, 255);
+      color: rgb(0, 0, 100);
+      height: 100px;
+      width: 200px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <h3>SIDEWAYS SKATE</h3>
+    </div>
+    <div class="nav">
+      <nav>
+        <ul>
+          <li><a id="HOME" href="https://www.youtube.com/watch?v=8VapN6x897U" target="_blank">HOME</a></li>
+          <li><a id="SOBRE" href="https://www.youtube.com/watch?v=8VapN6x897U" target="_blank">SOBRE</a></li>
+          <li><p id="CONTATOS">CONTATOS</p></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</body>
+
+</html>

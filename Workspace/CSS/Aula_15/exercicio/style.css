@@ -6,18 +6,10 @@
     font-size: 1rem;
 }
 
-
-header li {
-    display: inline;
-}
-
 a {
-    background-color: #F4DFBA;
     padding: 3px;
-    margin-left: 5px;
-    margin-right:5px ;
-    text-decoration: none;
-    color: #876445;
+    margin: 10px;
+    color: #EEC373;
 }
 
 .teste {

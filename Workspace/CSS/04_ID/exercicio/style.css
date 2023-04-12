@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+* {
+    background-color: #876445;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+}
+
+a {
+    padding: 3px;
+    margin: 10px;
+    color: #EEC373;
+}
+
+.teste {
+    border: 1px solid #EEC373;
+    text-align: center;
+}
+
+.teste h3 {
+    color: #83fff9;
+}
+
+.teste img  {
+    width: 10rem;
+    background-color: #ffffff;
+}

@@ -1,0 +1,22 @@
+table{
+  margin: 20px;
+  border: 3px outset black;
+  background-color:rgb(255, 248, 237) ;
+}
+th {
+  border: 3px outset black;
+  background-color:rgb(92, 92, 92);
+  text-shadow: 0px 0px 4px black;
+  color: white;
+}
+
+td {
+  border: 3px outset black;
+  background-color:rgb(242, 242, 242)
+}
+
+.id {
+  background-color: rgb(160, 160, 160);
+  color: white;
+  text-shadow: 0px 0px 4px black;
+}

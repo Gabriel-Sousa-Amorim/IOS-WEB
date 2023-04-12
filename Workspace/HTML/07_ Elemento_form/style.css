@@ -1,0 +1,34 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    margin: 0px;
+    background-color:rgb(142, 255, 127);
+    color: rgb(142, 255, 127);
+}
+main h2 {
+    text-align: center;
+    margin:0px;
+    padding: 15px;
+    background-color: rgb(142, 255, 127);
+    color: black;
+}
+
+.Formulario {
+    margin-left:25px;
+    margin-right:25px;
+    margin-top: 5px;
+}
+
+.border {
+    border-color:rgb(142, 255, 127);
+    padding: 5px;
+    background-color:rgb(27, 27, 27);
+}
+
+
+
+.Formulario input, textarea {
+    color:rgb(142, 255, 127);
+    border: 3px groove rgb(142, 255, 127);
+    margin: 3px;
+    background-color: rgb(27, 27, 27);
+}

@@ -1,0 +1,17 @@
+* {
+  margin:0;
+}
+
+header {
+  padding: 2px;
+  background-color:rgba(75,36,99,255);
+}
+
+.img {
+  width:85%;
+  height: auto;
+}
+
+.links {
+  margin-top: 10px;
+}

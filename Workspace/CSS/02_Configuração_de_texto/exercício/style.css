@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+.classe_um {
+    color: #fd0202;
+}
+h2.classe_dois {
+    margin: 2px;
+    color: #1100ff;
+}
+.classe_tres {
+    color:rgb(255, 0, 200);
+}
+.classe_quatro {
+    background-color:rgb(47, 0, 255);
+}

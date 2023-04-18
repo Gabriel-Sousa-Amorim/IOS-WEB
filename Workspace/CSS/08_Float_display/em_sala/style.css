@@ -1,0 +1,53 @@
+@charset 'utf-8';
+
+html {
+    width: 100%;
+}
+
+img {
+    width: 100px;
+}
+
+div {
+    padding: 5px;
+    border: 1px solid #000;
+    height: 25rem;
+    margin: 5px;
+}
+
+#Float-left {
+    float: left;
+}
+
+#Float-right {
+    float: right;
+}
+
+section {
+    height: 25rem;
+    display: block;
+}
+
+.Com_clear {
+    float: left;
+}
+
+.p_sessao {
+    clear: left;
+}
+
+#secao1 {
+    width: 300px;
+    height: 200px;
+    border: 2px solid red;
+    box-sizing: border-box;
+}
+
+#secao2 {
+    box-sizing: border-box;
+    padding: 300px;
+    width: 300px;
+    height: 200px;
+    border: 2px solid blue;
+    padding: 50px;
+}

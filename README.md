@@ -1,4 +1,3 @@
-
 # IOS
 
 Pasta com os arquivos e materiais do curso noturno de WEB , do Instituto da Oportunidade Social (IOS), Com as atividades feitas por Gabriel Sousa.
@@ -16,5 +15,8 @@ function  Agradecimentos() {
 ```javascript
 "Obrigado Prof. Rafael"
 "Obrigado Prof. Heloísa"
-```	 		
+```	 	
+
+<img src="https://media.licdn.com/dms/image/C4E16AQEPjiKQJv42Sw/profile-displaybackgroundimage-shrink_200_800/0/1569594379163?e=2147483647&v=beta&t=SkCfDCZKXxNC2bDuHLvrFniPnwhu_iwtwiXsyi2CxM0"  width="100%">
+
 

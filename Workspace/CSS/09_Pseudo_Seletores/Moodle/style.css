@@ -1,0 +1,114 @@
+      /*  :hover
+          :focus
+          :active
+          :visited
+          :link         
+
+          ::before
+          ::first-letter
+          ::after
+      */
+      @charset 'utf-8';
+
+      * {
+          margin: 0px;
+          padding: 0px;
+      }
+
+      html,
+      body {
+          width: 100%;
+      }
+
+      h1 {
+          color: black;
+      }
+
+      h1::first-letter {
+          color: rgb(43, 0, 255);
+      }
+
+      section {
+          margin: 5px;
+          padding: 3px;
+          border: 1px solid black;
+      }
+
+      #Section1 {
+          height: 300px;
+      }
+
+      #Section2 {
+          height: 300px;
+      }
+
+      #Section3 {
+          height: 300px;
+      }
+
+      img {
+          width: 25%;
+          max-width: 300px;
+          margin: 2px;
+          float: left;
+      }
+
+      .text-right {
+          clear: right;
+      }
+
+      #paragraph1:hover::after {
+          content: "Você foi Hackeado";
+          background-color: black;
+          color: green;
+      }
+
+      #Float-right {
+          float: right;
+      }
+
+      #p-Especial {
+          display: inline-block;
+          border: 2px solid black;
+      }
+
+      #p-Especial:active {
+          color: rgb(226, 43, 43);
+      }
+
+      #Especial::before {
+          content: "Pneumoultramicroscopicossilicovulcanoconiótico";
+          font-size: 80%;
+          background: #bbb;
+          font-family: monospace;
+      }
+
+      input {
+          margin: 1%;
+          width: 10%;
+      }
+
+      input:focus {
+          margin: 1%;
+          width: 70%;
+          height: 30%;
+      }
+
+      #Section3 {
+          text-align: center;
+      }
+
+      li {
+          list-style-type: none;
+      }
+
+      a:link {
+          width: 40%;
+          color: rgb(255, 0, 0);
+          background-color: rgb(0, 0, 0);
+      }
+
+      a:visited {
+          color: rgb(156, 0, 0);
+          background-color: rgb(0, 0, 0);
+      }

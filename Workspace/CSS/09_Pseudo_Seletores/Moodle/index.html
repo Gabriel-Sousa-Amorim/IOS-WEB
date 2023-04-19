@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @charset 'utf-8';
+      * {
+        margin: 10px;
+        text-align: center;
+      }
+
+      .Section1 {width: ;
+        border: 1px solid rgb(0, 0, 0);
+        background-color: rgb(204, 204, 204);
+      }
+      .Section1:hover {
+        background-color: white;
+      }
+
+      .Section1:hover::after {
+        content: "Você foi Hackeado HAHAHHAHAHAHHAHA";
+        padding: 3px;
+        font-family: cursive;
+        background-color: black;
+        color: rgb(89, 255, 0);
+      }
+
+      .Section2 {
+        border: 1px solid rgb(0, 0, 0);
+        background-color: rgb(204, 204, 204);
+      }
+      .Section2:active {
+        background-color: white;
+        padding: 10px;
+      }
+      h3:nth-child(2) {
+        background-color: rgb(255, 0, 0);
+        padding: 10px;
+      }
+
+      p::selection {
+        background-color: rgb(111, 0, 255);
+        color: white;
+      }
+      .Section3 {
+        border: 1px solid rgb(0, 0, 0);
+        background-color: rgb(204, 204, 204);
+      }
+      .Section3:not(h2) {
+        color: #00F;
+      }
+      form {
+        margin: auto;
+        background-color: brown;
+        width: 70%;
+      }
+      input:focus {
+        height: 100px;
+      }
+      #paragraph::before {
+        content: "Adição do ::Before";
+      }
+      p::first-letter {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="Section1">
+      <h1>👍👍👍 Mister Prêmios 👍👍👍</h1>
+      <h2>
+        Você acaba de ganhar um Marea 0km novinha. Resgatar o Prêmio no Morro do
+        piolho!
+      </h2>
+      <p>Parabéns! Clique aqui para ganhar seu Carro zero KM</p>
+    </section>
+
+    <section class="Section2">
+      <h1>👍👍👍 Oportunidades de Emprego 👍👍👍</h1>
+      <h3>Ajudante de Auxiliar de Cooperador Pedreiro</h3>
+      <p>Salário de R$:200</p>
+    </section>
+    <section class="Section3">
+      <h1>Escreva a refeição do monstro</h1>
+      <h2>ele está com fome</h2>
+      <form action="#">
+        <input readonly placeholder="O" type="text" />
+        <input readonly placeholder="O" type="text" />
+        <br />
+        <input type="textarea"/>
+      </form>
+      <p id="paragraph"></p>
+    </section>
+  </body>
+</html>

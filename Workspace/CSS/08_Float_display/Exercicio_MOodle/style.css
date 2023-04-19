@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 250px;
+}
+body {
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    font-size:25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.Div1 {
+    border: 2px solid #000;
+    height: 400px;
+}
+img {
+    float: left;
+}
+h2, h3, figcaption  {
+    clear: right;
+}
+#Img2 {
+    float: right;
+}
+.Text {
+    clear: left;
+}

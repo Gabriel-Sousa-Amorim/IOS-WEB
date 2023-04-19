@@ -6,93 +6,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      /*  :hover
+          :focus
+          :active
+          :visited
+          :link         
+
+          ::before
+          ::first-letter
+          ::after
+      */
       @charset 'utf-8';
       * {
-        margin: 10px;
-        text-align: center;
+        margin: 0px;
+        padding: 0px;
       }
-
-      .Section1 {width: ;
-        border: 1px solid rgb(0, 0, 0);
-        background-color: rgb(204, 204, 204);
+      html,
+      body {
+        width: 100%;
       }
-      .Section1:hover {
-        background-color: white;
+      h1 {
+        color: black;
       }
-
-      .Section1:hover::after {
-        content: "Você foi Hackeado HAHAHHAHAHAHHAHA";
+      h1::first-letter {
+        color: rgb(43, 0, 255);
+      }
+      section {
+        margin: 5px;
         padding: 3px;
-        font-family: cursive;
+        border: 1px solid black;
+      }
+      #Section1 {
+        height: 300px;
+      }
+      #Section2 {
+        height: 300px;
+      }
+      #Section3 {
+        height: 300px;
+      }
+      img {
+        width: 25%;
+        max-width: 300px;
+        margin: 2px;
+        float: left;
+      }
+      .text-right {
+        clear: right;
+      }
+      #paragraph1:hover::after {
+        content: "Você foi Hackeado";
         background-color: black;
-        color: rgb(89, 255, 0);
+        color: green;
+      }
+      #Float-right {
+        float: right;
       }
 
-      .Section2 {
-        border: 1px solid rgb(0, 0, 0);
-        background-color: rgb(204, 204, 204);
+      #p-Especial {
+        display: inline-block;
+        border: 2px solid black;
       }
-      .Section2:active {
-        background-color: white;
-        padding: 10px;
+      #p-Especial:active {
+        color: rgb(226, 43, 43);
       }
-      h3:nth-child(2) {
-        background-color: rgb(255, 0, 0);
-        padding: 10px;
+      #Especial::before {
+        content: "Pneumoultramicroscopicossilicovulcanoconiótico";
+        font-size: 80%;
+        background: #bbb;
+        font-family: monospace;
       }
-
-      p::selection {
-        background-color: rgb(111, 0, 255);
-        color: white;
-      }
-      .Section3 {
-        border: 1px solid rgb(0, 0, 0);
-        background-color: rgb(204, 204, 204);
-      }
-      .Section3:not(h2) {
-        color: #00F;
-      }
-      form {
-        margin: auto;
-        background-color: brown;
-        width: 70%;
+      input {
+        margin: 1%;
+        width: 10%;
       }
       input:focus {
-        height: 100px;
+        margin: 1%;
+        width: 70%;
+        height: 30%;
       }
-      #paragraph::before {
-        content: "Adição do ::Before";
+
+      #Section3 {
+        text-align: center;
       }
-      p::first-letter {
-        color: red;
+      li {
+        list-style-type: none;
+      }
+      a:link {
+        width: 40%;
+        color: rgb(255, 0, 0);
+        background-color: rgb(0, 0, 0);
+      }
+      a:visited {
+        color: rgb(156, 0, 0);
+        background-color: rgb(0, 0, 0);
       }
     </style>
   </head>
   <body>
-    <section class="Section1">
-      <h1>👍👍👍 Mister Prêmios 👍👍👍</h1>
-      <h2>
-        Você acaba de ganhar um Marea 0km novinha. Resgatar o Prêmio no Morro do
+    <section id="Section1">
+      <h1 align="center">EVITE COISAS ASSIM</h1>
+      <img
+        src="https://mundofixa.com/wp-content/uploads/2017/04/kombi-23-janelas-enferrujada-07.jpg"
+        alt=""
+      />
+      <h1 class="text-right">👍👍👍 Mister Prêmios 👍👍👍</h1>
+      <h2 class="text-right">
+        Você acaba de ganhar um Kombi 0km novinha. Resgatar o Prêmio no Morro do
         piolho!
       </h2>
-      <p>Parabéns! Clique aqui para ganhar seu Carro zero KM</p>
+      <p id="paragraph1" class="text-right">
+        Parabéns! Clique aqui para ganhar seu Carro zero KM &nbsp;
+      </p>
     </section>
 
-    <section class="Section2">
-      <h1>👍👍👍 Oportunidades de Emprego 👍👍👍</h1>
-      <h3>Ajudante de Auxiliar de Cooperador Pedreiro</h3>
-      <p>Salário de R$:200</p>
+    <section id="Section2">
+      <img
+        id="Float-right"
+        src="https://s.dicio.com.br/pneumoultramicroscopicossilicovulcanoconiotico.png"
+        alt=""
+      />
+      <h1>Escreva a palavra abaixo</h1>
+      <h3 id="Especial"></h3>
+      <input type="textarea" />
+      <p id="p-Especial">
+        Clique Aqui <br />
+        ipsum do Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Laboriosam, totam atque accusamus consequatur porro nobis aperiam saepe
+        non alias beatae reprehenderit ratione, unde magni soluta neque esse
+        eveniet illum voluptatem! or sit amet, consectetur adipisicing elit.
+        Autem modi ipsa illo voluptatum reiciendis odio ratione recusandae
+        provident laboriosam, vitae exercitationem, aliquid nemo quod doloribus
+        non? Quisquam dolores molestiae assumenda!
+      </p>
     </section>
-    <section class="Section3">
-      <h1>Escreva a refeição do monstro</h1>
-      <h2>ele está com fome</h2>
-      <form action="#">
-        <input readonly placeholder="O" type="text" />
-        <input readonly placeholder="O" type="text" />
-        <br />
-        <input type="textarea"/>
-      </form>
-      <p id="paragraph"></p>
+    <section id="Section3">
+      <h1>EVITE LINKS ASSIM</h1>
+      <nav>
+        <ul>
+          <li><a href="#">VAZADO!!! Link para Baixar o HTML 6</a></li>
+          <li><a href="#">VAZADO!!! Link para Baixar o CSS 4</a></li>
+          <li><a href="#">VAZADO!!! Link para Baixar o ECMASCRIPT 2030</a></li>
+          <li><a href="#">VAZADO!!! Link para Baixar o SCRATCH 2</a></li>
+          <br>
+          <p> Pseudoclaasses e Pseudoelementos usados<br>
+              :hover
+              :focus
+              :active
+              :visited
+              :link         
+  
+              ::before
+              ::first-letter
+              ::after</p>
+        </ul>
+      </nav>
     </section>
   </body>
 </html>

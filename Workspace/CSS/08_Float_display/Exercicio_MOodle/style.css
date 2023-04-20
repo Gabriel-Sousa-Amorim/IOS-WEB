@@ -2,9 +2,6 @@
     margin: 0;
     padding: 0;
 }
-img {
-    width: 250px;
-}
 body {
     width: 80%;
     margin: auto;
@@ -14,9 +11,10 @@ body {
 }
 .Div_Pai {
     border: 2px solid #000;
-    height: 400px;
+    height: 500px;
 }
 img {
+    width: 250px;
     float: left;
 }
 h2, h3, p  {
@@ -27,4 +25,22 @@ h2, h3, p  {
 }
 .Text {
     clear: left;
+}
+
+@media(max-width:414px) {
+    body {
+        padding: 1px;
+}
+    .Div_Pai {
+        margin: 0px;
+        width: 100%;
+        height: 800px;
+        font-size: 1w;
+    }
+    img {
+        width: 100% ;
+    }
+    h2, h3, p  {
+        font-size: 0.5w;
+    }
 }

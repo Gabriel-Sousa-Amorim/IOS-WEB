@@ -2,7 +2,7 @@
 
 <h1 align="center"> Instituto Oportunidade Social </h1>
 
-Pasta com os arquivos e materiais do curso noturno de WEB , do Instituto da Oportunidade Social (IOS), Com as atividades feitas por Gabriel Sousa.
+Pasta contendo arquivos e materiais do curso noturno de WEB que incluí HTML, CSS, JS, React e GIT-bash. Este repositório contém as atividades feitas por Gabriel Sousa durante o período do curso.
 
 ```javascript
 function  Agradecimentos() {

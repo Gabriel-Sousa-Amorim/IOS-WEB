@@ -34,16 +34,11 @@
           border: 1px solid black;
       }
 
-      #Section1 {
+      #Section1, #Section3 {
           height: 300px;
       }
-
       #Section2 {
-          height: 300px;
-      }
-
-      #Section3 {
-          height: 300px;
+        height: 45vw;
       }
 
       img {
@@ -70,6 +65,7 @@
       #p-Especial {
           display: inline-block;
           border: 2px solid black;
+          font-size: 1vw;
       }
 
       #p-Especial:active {

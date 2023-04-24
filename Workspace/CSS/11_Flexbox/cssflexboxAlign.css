@@ -1,0 +1,39 @@
+@charset 'utf-8';
+
+* {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+section {
+  display: flex;
+  align-items:flex-end;
+  flex-direction: row;
+}
+div {
+  border: 1px solid #000;
+}
+#div1 {
+  flex:8;
+  order: 4;
+  background-color: #fff;
+}
+
+#div2 {
+  flex:1;
+  order: 1;
+  background-color: #f00;
+}
+
+#div3 {
+  flex: 5;
+  order: 2;
+  background-color: #0f0;
+  align-self:baseline;
+}
+
+#div4 {
+  flex:6;
+  order: 3;
+  background-color: #00f;
+}

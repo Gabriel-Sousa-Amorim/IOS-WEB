@@ -2,18 +2,19 @@
 
 <h1 align="center"> Instituto Oportunidade Social </h1>
 
-Pasta contendo arquivos e materiais do curso noturno de WEB que incluí HTML, CSS, JS, React e GIT-bash. Este repositório contém as atividades feitas por Gabriel Sousa durante o período do curso.
+Pasta contendo arquivos e materiais do curso noturno de WEB que incluí HTML, CSS, JS, React e GIT-bash incluindo aulas, apostilas e exercicios. Este repositório contém as atividades feitas por Gabriel Sousa durante o período do curso.
 
 ```javascript
 function  Agradecimentos() {
-  let profs = {ProfRafa: "Rafael", ProfHelo: "Heloísa"};
+  let profs = ["Rafael", "Heloísa"];
 	for (var i in profs) {
   console.log("Obrigado Prof.", profs[i]);
   	}
   };
 	Agradecimentos();
 ```
-**Output:**
+
+***Output:***
 	
 ```javascript
 "Obrigado Prof. Rafael"

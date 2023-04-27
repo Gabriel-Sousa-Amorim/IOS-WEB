@@ -1,46 +1,99 @@
 @charset "utf-8";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  background-color: #2a2a2a;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color-scheme: dark;
 }
 header {
-    text-align: center;
-    background-color: blue;
-    margin-bottom: 10px ;
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 10px;
-    margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  margin: 65px;
 }
-
 .items {
-
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        place-content: center;
-        border: 1px solid #000;
-        align-items: end;
+  padding: 5px;
+  background-color: #464646;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1px;
+  place-content: center;
+  border: 1px solid #000;
+  align-items: end;
+  border-radius: 10px;
 }
-.items > h3  {
-    text-align: center;
+.items > h3 {
+  text-shadow: 2px 2px 1px#000;
+  background-size: cover;
+  align-self: stretch;
+  text-align: center;
+  font-weight: 900;
+  font-size: x-large;
+  border-radius: 10px;
+  background-position: center center;
 }
-.items > a  {
-    display: grid;
-    justify-self: end;
-    padding: 10px;
-    margin: 10px;
-    background-color: #8b3a00;
-    text-decoration: none;
+.items > p {
+  text-align: justify;
+  text-justify: inter-word;
 }
-.items > a:hover  {
-    background-color: #643000;
-    color: #ffffff;
-    text-decoration: underline;
+.items > a {
+  display: grid;
+  justify-self: end;
+  padding: 10px;
+  margin: 10px;
+  background-color: #000000;
+  text-decoration: none;
+  color: #ffffff;
 }
-.items > a:visited  {
-    color: #ffffff;
+.items > a:hover {
+  background-color: #222;
+  text-decoration: underline;
+}
+.items > a:visited {
+  color: #ffffff;
+}
+.item1 > h3 {
+  background-image: url("./assets/1.jpg");
+  background-position: 50% 25%;
+}
+.item2 > h3 {
+  background-image: url("./assets/2.jpg");
+}
+.item3 > h3 {
+  background-image: url("./assets/3.jpg");
+  background-position: 50% 25%;
+}
+.item4 > h3 {
+  background-image: url("./assets/4.jpg");
+  background-position: 50% 25%;
+}
+.item5 > h3 {
+  background-image: url("./assets/5.jpg");
+  background-position: 50% 25%;
+}
+.item6 > h3 {
+  background-image: url("./assets/6.jpg");
+  background-position: 50% 25%;
+}
+.item7 > h3 {
+  background-image: url("./assets/7.jpg");
+  background-position: 50% 25%;
+}
+.item8 > h3 {
+  background-image: url("./assets/8.jpg");
+  background-position: 50% 25%;
 }

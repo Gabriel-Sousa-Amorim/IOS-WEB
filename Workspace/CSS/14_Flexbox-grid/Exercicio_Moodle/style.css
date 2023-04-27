@@ -1,0 +1,46 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    text-align: center;
+    background-color: blue;
+    margin-bottom: 10px ;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    margin: 10px;
+}
+
+.items {
+
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        place-content: center;
+        border: 1px solid #000;
+        align-items: end;
+}
+.items > h3  {
+    text-align: center;
+}
+.items > a  {
+    display: grid;
+    justify-self: end;
+    padding: 10px;
+    margin: 10px;
+    background-color: #8b3a00;
+    text-decoration: none;
+}
+.items > a:hover  {
+    background-color: #643000;
+    color: #ffffff;
+    text-decoration: underline;
+}
+.items > a:visited  {
+    color: #ffffff;
+}

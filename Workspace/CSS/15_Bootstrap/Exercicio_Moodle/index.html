@@ -4,48 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8"> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
-    rel="stylesheet" 
-    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" 
-    crossorigin="anonymous"> 
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" type="image/x-icon">
+    <title>Bootstrap parte 1</title>
+</head>
+
 <body class="bg-dark"> 
-    
+
     <!--Header-->
-<header class="bg-success container-fluid">
-        <div class="py-5">
-        <h1 class="h1 text-white">Lorem Ipsum</h1>
-        <p class="text-white"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique quis quidem tempore quae suscipit dolores. Accusamus ipsam?</p>
-        <a class="btn float-end bg-white border border-3 border-dark" target="_blank" href="https://github.com/Gabriel-Sousa-amorim/">Acesse meu Github!</a>
-    </div>
+    <header class="bg-success p-5 text-white">
+            <h1>&lt;/&gt;</h1>        
+            <h1 class="h1">Bootstrap no <abbr title="Instituto da Oportunidade Social">IOS</abbr></h1>
+            <h3 class="h3 text-dark">Header</h3>
+            <p>Exercício da Aula 15 do Curso de Programação Web no período noturno.</p>
+            <a class="btn float-right bg-white border border-3 border-dark" target="_blank" href="https://github.com/Gabriel-Sousa-amorim/">Acesse meu Github!</a>
+        </div>
     </header>
+
     <!--Navbar-->
-    <nav class="navbar-expand-fluid nav-bar mb-2 py-2 border-bottom border-5 border-success bg-white text-center">
-        <a class="btn border border-success mx-2" href="#Tipografia">Tipografia</a>
-        <a class="btn border border-success mx-2" href="#Blockquote">Blockquote</a>
-        <a class="btn border border-success mx-2" href="#Code">Code</a>
-    </nav>
-    
+    <section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-success">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse text-center navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="btn bg-light m-2 text-dark nav-item nav-link active" href="#Tipografia">Tipografia</span></a>
+            <a class="btn bg-light m-2 text-dark nav-item nav-link" href="#Blockquote">Citação</a>
+            <a class="btn bg-light m-2 text-dark nav-item nav-link" href="#Lists">Listas</a>
+            <a class="btn bg-light m-2 text-dark nav-item nav-link" href="#Code">Código</a>
+            <a class="btn bg-light m-2 text-dark nav-item nav-link" href="#Buttons">Botões</a>
+            <a class="btn bg-light m-2 text-dark nav-item nav-link disabled" href="#">Bootstrap parte 2</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+
     <!--Tipografia-->
     <section class="container bg-white rounded my-3 p-2" id="Tipografia">
         <h2 class="h2 text-center text-success text-capitalize">filius lorem ipsum</h2>
         <h4 class="h4 text-center text-muted">Requiesce in pace</h4>
         <!--Texto à esquerda-->
-        <div class="text-left border bg-white rounded my-3 p-2">
+        <div class="shadow text-left border bg-white rounded my-3 p-2">
             <h6 class="h6 text-muted">Left</h6>
-            <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lectus enim, imperdiet a lobortis eget, volutpat at mauris. Maecenas ut lobortis diam. Aliquam ullamcorper, purus sit amet tincidunt tincidunt, libero velit viverra erat, et mollis ex purus vel dolor. Donec eleifend dolor at lectus commodo, at dignissim ipsum porta. Donec felis purus, venenatis viverra iaculis nec, interdum eget tortor. Curabitur elit mauris, cursus id pulvinar ac, volutpat non metus. Quisque at ante nisl. Pellentesque rutrum diam nulla, eget sagittis ante finibus id. Aliquam egestas fermentum bibendum. Vivamus consequat, nisi non ultricies pharetra, sapien augue ultrices leo, at suscipit sem turpis ut ipsum. Maecenas fermentum vulputate orci id vehicula. Integer et gravida ante.</p>
+            <p class="text-start">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lectus enim, imperdiet a lobortis eget, volutpat at mauris. Maecenas ut lobortis diam. Aliquam ullamcorper, purus sit amet tincidunt tincidunt, libero velit viverra erat, et mollis ex purus vel dolor. Donec eleifend dolor at lectus commodo, at dignissim ipsum porta. Donec felis purus, venenatis viverra iaculis nec, interdum eget tortor. Curabitur elit mauris, cursus id pulvinar ac, volutpat non metus. Quisque at ante nisl. Pellentesque rutrum diam nulla, eget sagittis ante finibus id. Aliquam egestas fermentum bibendum. Vivamus consequat, nisi non ultricies pharetra, sapien augue ultrices leo, at suscipit sem turpis ut ipsum. Maecenas fermentum vulputate orci id vehicula. Integer et gravida ante.</p>
         </div>
         <!--Texto ao centro-->
-        <div class="text-center border bg-white rounded my-3 p-2">
+        <div class="shadow text-center border bg-white rounded my-3 p-2">
         <h6 class="h6 text-muted">Center</h6>
         <p>Pellentesque sit amet pulvinar quam, non euismod lorem. Duis felis urna, ullamcorper non fermentum at, maximus et elit. Nulla posuere dui diam, sit amet malesuada magna cursus a. Sed ut ipsum nec justo sagittis accumsan. Suspendisse maximus mi arcu, sed porttitor velit tempus in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat.</p>
         </div>
         <!--Texto ao Direito-->
-        <div class="text-end border bg-white rounded my-3 p-2">
+        <div class="shadow text-right border bg-white rounded my-3 p-2">
         <h6 class="h6 text-muted">Direita</h6>
         <p>Euismod suscipit sem, vel vehicula augue luctus at. Mauris ornare tempus libero vel gravida. Nunc scelerisque eros quis felis viverra, gravida hendrerit magna tincidunt. In hac habitasse platea dictumst. Cras pulvinar suscipit lorem sed dapibus. Nunc consequat faucibus libero, ac mattis lectus pellentesque in. Etiam tincidunt magna ut lobortis tristique. Nam porttitor pretium turpis, ut iaculis nibh sodales nec. Integer sit amet ex eget lorem vestibulum tincidunt. Vestibulum sagittis est velit, sagittis maximus augue placerat in. Mauris ut gravida lorem, nec auctor metus. Etiam auctor ultrices maximus. Donec vitae semper lectus.</p>
         </div>
+        <section class="container p-1"> 
+            <div class="shadow clearfix border p-2 mb-2">
+                <h1>Float Left</h1>
+                <img class="float-left w-50" src="img.jpg" alt="float-left">
+            </div>
+            <div class="shadow clearfix border p-2">
+                <h1 class="text-right">Float Right</h1>
+                <img class="float-right w-50" src="img.jpg" alt="float-right">
+            </div>
+        </section>
     </section>
     
     <!--Blockquote-->
@@ -53,16 +77,16 @@
     <div class="container">
         <blockquote>
             <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur asperiores nesciunt quos iure illo at dolores quod sit vel nihil, dolore modi. Culpa autem, error dolorem optio impedit beatae laboriosam?</p>
-            <cite class="text-italic">Lorem Ipsum da Silva</cite>
+            <cite class="blockquote-footer">Lorem Ipsum da Silva</cite>
         </blockquote>
     </div>
     </section>
     
     <!--Lists-->
-    <section class="container bg-white rounded my-3 p-2">
-        <h1 class="h1">2</h1>
+    <section class="container bg-white rounded my-3 p-2" id="Lists">
+        <h1 class="h1 text-start">Lists</h1>
         <div>
-    <ol>
+    <ol class="list">
         <li>Lorem</li>
         <li>Ipsun</li>
         <li>Dolor</li>
@@ -71,12 +95,12 @@
     </ol>
 </div>
 <div>
-    <ul>
-        <li>Lorem</li>
-        <li>Ipsun</li>
-        <li>Dolor</li>
-        <li>Sit</li>
-        <li>Amet</li>
+    <ul class="list-group">
+        <li class="list-group-item active">Lista não ordenada</li>
+        <li class="list-group-item">Lorem</li>
+        <li class="list-group-item">Ipsun</li>
+        <li class="list-group-item">Sit</li>
+        <li class="list-group-item">Amet</li>
     </ul>
 </div>
     </section>
@@ -94,20 +118,18 @@
     </section>
 
     <!--Buttons-->
-    <section class="container">
-        <a href="#" class="d-block m-2 btn border text-white border-primary">lorem</a>
-        <a href="#" class="d-block m-2 btn border text-white border-secondary">lorem</a>
-        <a href="#" class="d-block m-2 btn border text-white border-warning">lorem</a>
-        <a href="#" class="d-block m-2 btn border text-white border-danger">lorem</a>
-        <a href="#" class="d-block m-2 btn border text-white border-success">lorem</a>
+    <section class="container bg-light text-center" id="Buttons">
+        <a href="" class=" m-2 btn btn-outline-primary border-primary">lorem</a>
+        <a href="" class=" m-2 btn-outline-secondary btn border-secondary">lorem</a>
+        <a href="" class=" m-2 btn-outline-warning btn border-warning">lorem</a>
+        <a href="" class=" m-2 btn-outline-danger btn border-danger">lorem</a>
+        <a href="" class=" m-2 btn-outline-success btn border-success">lorem</a>
     </section>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.m
-in.js" 
-        integrity="sha384-
-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" 
-        crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
  

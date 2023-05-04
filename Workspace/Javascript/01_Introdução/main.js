@@ -18,6 +18,3 @@ var bollean = True;
 console.log(bollean);
 document.getElementById('Bollean').innerHTML = bollean;
 
-// Get all the <p> tags on the page
-var paragraphs = document.getElementsByTagName("p").innerHTML;
-paragraphs.style.margin = "1000px";

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<p id="p"></p>
+<script>
+        var input = prompt("Insira o valor que deseja multiplicar:");
+        var multiplo = prompt("Insira o valor de quantas vezes deseja multiplicar");
+        if (multiplo >= 1) {
+            for(i=0; i <= multiplo ;++i) {
+            var result =+ `${input} x ${i} = ${input * i}`;
+            document.getElementById("p").innerHTML = result;
+        };
+
+    } else {
+        console.error("Insira valores válidos");
+    };
+    </script>
+</body>
+</html>

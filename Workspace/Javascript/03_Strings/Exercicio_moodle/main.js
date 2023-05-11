@@ -19,6 +19,12 @@ console.log(`As 3 primeiras letras ${abacaxi} é '${abacaxi.substring(1, 4)}' \n
 console.log(`'${abacaxi}' corrigido é ${abacaxi.trim(" ")}`)
 
 console.log(`${abacaxi} se tornou `)
-console.log(abacaxi.replace( 'Abacaxi', abacaxi.toLowerCase()))
+console.log(abacaxi.replace('Abacaxi', abacaxi.toLowerCase()))
 
 console.log(`${morango}, ${limao}, ${manga}, ${melancia + "," + abacaxi}`)
+
+var numero1 = 1;
+var numero2 = 99999999998;
+
+console.log(`var numero1 = ${numero1}`);
+console.log(`var numero2 = ${numero2}`);

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<fieldset>
+    <legend>
+        Exemplo de função em <mark>Javascript</mark>
+    </legend>
+    <code>
+        function Funcionar() {<br>
+            var Nome = prompt("Insira seu nome");<br>
+            var Idade = prompt("Insira sua idade");<br>
+            console.log(Nome, Idade)<br>
+            if (Nome != Idade) {<br>
+                if (Idade &t; 1 && Idade &lt; 128) {<br>
+                    alert(`Olá me chamo ${Nome} e tenho ${Idade} anos`);<br>
+                } else if(Idade == 1) {<br>
+                    alert(`Olá me chamo ${Nome} e tenho ${Idade} ano`);<br>
+                } else {<br>
+                alert(Nome + " você não tem essa de um idade!");<br>
+            }<br>
+        } else {<br>
+                alert("Erro, seu nome deve ser diferente da sua idade!");<br>
+        };
+    }
+    </code>
+    </fieldset>
+    <button onclick="Funcionar()">Click For Run this code</button>
+    
+    <fieldset>
+        <legend>
+            Função => <mark>Javascript</mark>
+        </legend>
+        <code>
+            const functionalidade = (x, y) =>  {<br>
+                z = ++x += y;<br>
+            };
+        
+        </code>
+        </fieldset>
+    <script>
+        function Funcionar() {
+            var Nome = prompt("Insira seu nome");
+            var Idade = prompt("Insira sua idade");
+            console.log(Nome, Idade)
+            if (Nome != Idade) {
+                if (Idade > 1 && Idade < 128) {
+                    alert(`Olá me chamo ${Nome} e tenho ${Idade} anos`);
+
+                } else if(Idade == 1) {
+                    alert(`Olá me chamo ${Nome} e tenho ${Idade} ano`);
+                } else {
+                alert(Nome + " você não tem essa de um idade!");
+            }
+        } else {
+                alert("Erro, seu nome deve ser diferente da sua idade!");
+            }
+        };
+    </script>
+</body>
+</html>

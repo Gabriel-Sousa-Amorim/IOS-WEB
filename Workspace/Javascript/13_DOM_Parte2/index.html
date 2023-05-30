@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            border: "2px solid #000";
+        }
+        ul li {
+            list-style: none ;
+        }
+    </style>
+</head>
+<body>
+    <section onmouseover="bgchange('#d77')" onmouseout="bgchange('#d33')" id="bg-container" name="bg-container">
+        <div>
+            <p class="p">Hello World</p>
+            <p class="p">Hello World</p>
+            <p class="p">Hello World</p>
+            <p class="p">Hello World</p>
+        </div>
+        
+        <ul id="UlList">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        
+        <div>
+            <p class="p">Hello World</p>
+            <p class="p">Hello World</p>
+            <p class="p">Hello World</p>
+            <p class="p">Hello World</p>
+        </div>
+    </section>
+<script>
+    
+    //Muda a cor e põe uma borda inferior
+    let section = document.getElementById("bg-container");
+    function bgchange(x) {
+        section.style.background =  x;  
+    };
+    section.style.borderBottom =  "1px solid #000";
+
+    //Define o Font weight dos paragrafos para 900 
+    let paragraph = document.getElementsByClassName("p");
+    let fontWeight = Array.prototype.map.call(paragraph, i => i.style.fontWeight = "900");
+
+    let Lista = document.getElementsByTagName("li");
+    function Zebrado() {
+    for (i = 0; i < Lista.length; i++) {
+        if (i % 2 == 0) {
+            Lista[i].style.background = "#FFF";
+        } else { 
+            Lista[i].style.background = "#ddd";
+        }
+    }
+}
+    let UltimoItem = Lista[Lista.length-1];
+    UltimoItem.remove();
+    let NovoItem = document.createElement("li");
+    NovoItem.innerHTML = "Elemento Recuperado";
+    let list = document.getElementById("UlList");
+    list.insertBefore(NovoItem, list.children[0]);
+    Zebrado()
+    
+    
+    
+</script>
+</body>
+</html>

@@ -12,9 +12,9 @@
 <script>
         var input = prompt("Insira o valor que deseja multiplicar:");
         var multiplo = prompt("Insira o valor de quantas vezes deseja multiplicar");
-        if (multiplo >= 1) {
-            for(i=0; i <= multiplo ;++i) {
-            var result =+ `${input} x ${i} = ${input * i}`;
+        if (parseInt(multiplo) >= 1) {
+            for(i=0; i <= parseInt(multiplo) ;++i) {
+            var result =+ `${parseInt(input)} x ${i} = ${parseInt(input) * i}`;
             document.getElementById("p").innerHTML = result;
         };
 

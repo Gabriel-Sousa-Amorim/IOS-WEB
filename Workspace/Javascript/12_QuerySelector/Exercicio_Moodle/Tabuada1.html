@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: rgb(206, 206, 206);
+        }
+        #Resultado {
+            display: block;
+            background: rgb(248, 248, 248);
+            box-shadow: inset 0px 0px 10px rgb(230, 230, 230);
+        }
+        #Resultado p {
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabuada 1</h1>
+
+    <input type="number" maxlength="13" name="" id="valorx">
+    <input type="button" onclick="multiplicar()" value="Calcular">
+    <div id="Resultado">
+
+    </div>
+        <script>
+        function multiplicar() {
+            let clear = document.querySelectorAll("p");
+            clear.forEach(i => i.remove())
+
+            let x = document.getElementById("valorx").value;
+            for (i = 1; i <=10; i++) {
+                let p = document.createElement("p");
+                document.getElementById("Resultado").append(p);
+                p.innerHTML = `${x} x ${i} = ${x * i}`;
+            };
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<section id="section1">
+<h1>Tabuada 2</h1>
+<input id="multiplicado" maxlength="6" type="text"  value="0">
+<input id="multiplicador" maxlength="6" type="text" value="0">
+<input onclick="teste()" type="button">
+</section>
+<body>
+    <script>
+        function teste() {
+
+        let clear = document.querySelectorAll("p")
+        clear.forEach(i => {i.remove()});
+
+        let multiplicado = document.getElementById("multiplicado").value
+        let multiplicador = document.getElementById("multiplicador").value
+        let x = parseInt(multiplicado);
+        let y = parseInt(multiplicador);
+
+        for (i = 1; i <= y; i++) {
+            let p = document.createElement("p");
+            document.getElementById("section1").appendChild(p);
+            p.innerHTML = `${x} x ${i} = ${x * i}`;
+        }
+    }
+    </script>
+</body>
+</html>

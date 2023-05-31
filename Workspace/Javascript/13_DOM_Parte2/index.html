@@ -47,8 +47,8 @@
     function bgchange(x) {
         section.style.background =  x;  
     };
-    let bg-container = document.getElementsByTagName("bg-container");
-    section.style.borderBottom =  "1px solid #000";
+    let bgcontainer = document.getElementsByName("bg-container");
+    bgcontainer[0].style.borderBottom =  "1px solid #000";
 
     //Define o Font weight dos paragrafos para 900 
     let paragraph = document.getElementsByClassName("p");
@@ -67,7 +67,7 @@
     let UltimoItem = Lista[Lista.length-1];
     UltimoItem.remove();
     let NovoItem = document.createElement("li");
-    NovoItem.innerHTML = "Elemento Recuperado";
+    NovoItem.textContent = "Elemento Recuperado";
     let list = document.getElementById("UlList");
     list.insertBefore(NovoItem, list.children[0]);
     Zebrado()

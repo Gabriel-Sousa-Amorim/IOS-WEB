@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+body { 
+    font-family: Arial, Helvetica, sans-serif; 
+    line-height: 1.6; 
+} 
+ul { 
+    list-style: none; 
+} 
+ul li { 
+    padding: 5px; 
+    background: #f4f4f4; 
+    margin: 5px 0; 
+} 
+header { 
+    background: #f4f4f4; 
+    padding: 1rem; 
+    text-align: center; 
+} 
+.container { 
+    margin: auto; 
+    width: 500px; 
+    overflow: auto; 
+    padding: 3rem 2rem; 
+} 
+#my-form { 
+    padding: 2rem; 
+    background: #f4f4f4; 
+}
+#my-form label { 
+    display: block; 
+} 
+#my-form input[type='text'] { 
+    width: 100%; 
+    padding: 8px; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+} 
+#my-form select { 
+    width: 20%; 
+    padding: 8px; 
+    margin-bottom: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+} 
+.btn { 
+    display: block; 
+    width: 100%; 
+    padding: 10px 15px; 
+    border: 0; 
+    background: #333; 
+    color: #fff; 
+    border-radius: 5px; 
+    margin: 5px 0; 
+} 
+.btn:hover { 
+    background: #444; 
+} 
+.bg-dark { 
+    background: #333; 
+    color: #fff; 
+} 
+.error { 
+    font-size: 0.8rem; 
+    background: #fff; 
+    color: red; 
+}     
+        
+        
+    </style>
+</head>
+<body>
+    <section class="container"> 
+    <form id="my-form"> 
+        <h1>Adicionar Usuário</h1> 
+        <div class="msg"></div> 
+        <div> 
+            <label for="name">Nome:</label> 
+            <input type="text" id="name" required /> 
+        </div> 
+        <div> 
+            <label for="email">E-mail:</label> 
+            <input type="text" id="email" required /> 
+        </div> 
+        <div class="msg_email"></div> 
+        <div> 
+            <label for="horario">Horário:</label> 
+            <select name="hours" id="horario"> 
+                <option value="--">---</option> 
+                <option value="9:00h">9:00</option> 
+                <option value="10:00h">10:00</option> 
+                <option value="11:00h">11:00</option> 
+                <option value="12:00h">12:00</option> 
+            </select> 
+        </div> 
+        <input class="btn" type="submit" value="Enviar" /> 
+    </form>
+    <ul id="users"></ul>
+    <script>
+        // Função onSubmit 
+function onSubmit(e) { 
+    e.preventDefault(); 
+    // console.log(nameInput.value); 
+    // Método querySelector 
+const btn = document.querySelector('.btn'); 
+btn.style.background = 'red';
+    // Busca pelos elementos do Formulário 
+    if (nameInput.value === '' || emailInput.value === '') {
+        // alert('Por favor, preencha os dados.'); 
+        msg.classList.add('error'); 
+        msg.innerHTML = 'Por favor, preencha os dados.'; 
+        setTimeout(() => msg.remove(), 3000); 
+    } else { 
+        // console.log('sucess'); 
+        const li = document.createElement('li'); 
+        li.appendChild( 
+            document.createTextNode( 
+                `${nameInput.value} : ${emailInput.value} : ${horario.value}` 
+                ) 
+                ); 
+                userList.appendChild(li); 
+                // Limpa o formulário 
+                nameInput.value = ''; 
+                emailInput.value = ''; 
+                horario.getElementsByTagName('option')[0].selected = 'selected'; 
+                nameInput.focus(); //Coloca o foco no elmento 
+            } 
+        }
+        // Validando e-mail 
+        const emailInput = document.querySelector('#email'); 
+        const myForm = document.querySelector('#my-form'); 
+        const nameInput = document.querySelector('#name'); 
+        const horario = document.querySelector('#horario'); 
+        const msg = document.querySelector('.msg'); 
+        const msg_email = document.querySelector('.msg_email'); 
+        const userList = document.querySelector('#users');
+        emailInput.addEventListener("change", (e) => { 
+    let padrao = new RegExp(/[9][ ]?(\d{4})+[- ]?(\d{4})/gm); 
+    if (!padrao.test(emailInput.value)) { 
+        // alert('Por favor, insira um e-mail válido.'); 
+        msg_email.classList.add('error'); 
+        msg_email.innerHTML = 'Por favor, insira um e-mail válido.'; 
+        setTimeout(() => msg.remove(), 3000); 
+    }
+});
+    </script>
+</body>
+</html>

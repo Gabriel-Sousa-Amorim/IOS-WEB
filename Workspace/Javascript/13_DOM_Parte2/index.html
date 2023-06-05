@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-    <section onmouseover="bgchange('#d77')" onmouseout="bgchange('#d33')" id="bg-container" name="bg-container">
+    <section id="bg-container" name="bg-container">
         <div>
             <p class="p">Hello World</p>
             <p class="p">Hello World</p>
@@ -40,6 +40,12 @@
             <p class="p">Hello World</p>
         </div>
     </section>
+    <button onmouseenter="bgchange('#744')" onmouseout="bgchange('#422')">Botão</button>
+    <button onclick="">Botão</button>
+    <button onclick="">Botão</button>
+    <button onclick="">Botão</button>
+    <button onclick="">Botão</button>
+    <button onclick="">Botão</button>
 <script>
     
     //Muda a cor e põe uma borda inferior
@@ -48,7 +54,7 @@
         section.style.background =  x;  
     };
     let bgcontainer = document.getElementsByName("bg-container");
-    bgcontainer[0].style.borderBottom =  "1px solid #000";
+    bgcontainer[0].style.borderBottom = "1px solid #000";
 
     //Define o Font weight dos paragrafos para 900 
     let paragraph = document.getElementsByClassName("p");

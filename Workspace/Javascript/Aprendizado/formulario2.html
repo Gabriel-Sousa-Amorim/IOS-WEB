@@ -18,18 +18,17 @@
             Formulário 
         </h1>
         <div class="container formDiv">
-            <label class="form-label" for="Nome">Nome Completo</label>
-            <input autocomplete="off" required="required"  class="form-control" type="text" name="" id="Nome">
+            <label class="" for="Nome">Nome Completo</label>
+            <input required="required"  class="form-control" type="text" name="" id="Nome">
             <p id="errorMsg1"></p>
-            <label class="form-label" for="Data">Data de Nascimento (Mês/Dia/Ano)</label>
-            <input autocomplete="off" required="required" class="form-control" type="date" name="" placeholder="Mês/Dia/Ano" id="Data">
+            <label class="" for="Data">Data de Nascimento</label>
+            <input required="required" class="form-control" type="date" name="" placeholder="Mês/Dia/Ano" id="Data">
             <p id="errorMsg2"></p>
-            <label class="form-label" for="Email">Email</label>
-            <input autocomplete="off" required="required" class="form-control" type="email" name="" id="Email">
+            <label class="" for="Email">Email</label>
+            <input required="required" class="form-control" type="email" name="" id="Email">
             <p id="errorMsg3"></p>
-            <hr>
-            <label class="form-label" for="Item">Campo de busca para exlusão de seção (Gerado automaticamente)</label>
-            <input autocomplete="off" class="form-control" type="text" name="" id="Item">
+            <label class="" for="item">Item</label>
+            <input class="form-control" type="text" name="" id="Item">
             <p id="errorMsg4"></p>
             <hr>
         </div>
@@ -37,6 +36,7 @@
     <div class="container d-flex flex-lg-row text-center">
     <button class="btn btn-outline-primary mx-2 flex-fill" id="btnIncluir">Incluir</button>
     <button class="btn btn-outline-danger mx-2 flex-fill" id="btnExcluir">Excluir</button>
+    <input type="search" name="" onfocus="find()" id="searchBar">
 </div>
 </section>
 <section class="container bg-dark p-5 my-2 rounded rounded-5 inputsLists">
@@ -114,7 +114,7 @@
             }
         }
         elmt3.addEventListener("blur", ValidaçãoEmail, true)
-        const elmt4 = document.getElementById("Item");
+        let elmt4 = document.getElementById("Item");
         let section =  document.querySelector('section.inputsLists')
         function addList() {
             if (ValidaçãoNome() == true && ValidaçãoIdade() == true && ValidaçãoEmail() == true) {
@@ -144,7 +144,8 @@
             }
         } 
         document.getElementById("btnIncluir").addEventListener("click", addList, true);
-        function delList( ){
+
+        function delList() {
             let RegExpItem = new RegExp(/^(\d{5})+?[-]+?(\d{4})/i)
             if (RegExpItem.test(elmt4.value) == true && section.contains(document.getElementById(elmt4.value))) {
                 errorMsgs[3].textContent = ""
@@ -154,6 +155,10 @@
             }
         }
         document.getElementById("btnExcluir").addEventListener("click", delList, true)
+
+        function find() {
+            console.log(section.querySelectorAll("div"))
+        }
     </script>
 </body>
 </html>

@@ -73,7 +73,7 @@
                 let dataNasc = new Date(elmt2.value)
                 let dataAtual = new Date()
                 if (dataAtual.getFullYear() > dataNasc.getFullYear() 
-                && dataNasc.getFullYear() > (dataAtual.getFullYear() - 126)) 
+                && dataNasc.getFullYear() > (dataAtual.getFullYear() - 120)) 
                 {
                     errorMsgs[1].textContent = "";
                     if (dataAtual.getFullYear() - dataNasc.getFullYear() < 18) 
@@ -102,7 +102,7 @@
             }
         elmt2.addEventListener("blur", ValidaçãoIdade, true)
         
-        let elmt3 = document.getElementById("Email");
+        const elmt3 = document.getElementById("Email");
         function ValidaçãoEmail() {
             let ExpRegexEmail = new RegExp(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i)
             if(ExpRegexEmail.test(elmt3.value) == true && elmt3.value.length > 5) {
@@ -116,13 +116,14 @@
         elmt3.addEventListener("blur", ValidaçãoEmail, true)
         const elmt4 = document.getElementById("Item");
         let section =  document.querySelector('section.inputsLists')
+        var JSONstr = 0;
         function addList() {
             if (ValidaçãoNome() == true && ValidaçãoIdade() == true && ValidaçãoEmail() == true) {
                 //Geração de id aleatório para o id da div e o valor do item
                 let div = document.createElement(`div`)
                 elmt4.value = Math.floor(Math.random() * (99999 - 10000) + 10000) + "-" + Math.floor(Math.random() * (9999 - 1000) + 1000);
                 div.id = elmt4.value; 
-                let li1 = document.createElement("h1")
+                let li1 = document.createElement("li")
                 li1.innerHTML = elmt1.value;
                 let li2 = document.createElement("li")
                 li2.innerHTML = "Data de Nascimento:" + elmt2.value;
@@ -137,6 +138,11 @@
                 elmt2.value = ""
                 elmt3.value = ""
                 elmt4.value = ""
+                Array.from(div.getElementsByTagName("li")).forEach( function (i) {
+                    var itemName = i.firstChild.textContent;
+                    JSONstr = JSON.stringify(itemName);
+                    console.log(JSONstr)
+                })
             } else {
                 ValidaçãoNome();
                 ValidaçãoIdade();
@@ -145,6 +151,7 @@
         } 
         document.getElementById("btnIncluir").addEventListener("click", addList, true);
         function delList( ){
+            console.log(JSONstr);
             let RegExpItem = new RegExp(/^(\d{5})+?[-]+?(\d{4})/i)
             if (RegExpItem.test(elmt4.value) == true && section.contains(document.getElementById(elmt4.value))) {
                 errorMsgs[3].textContent = ""

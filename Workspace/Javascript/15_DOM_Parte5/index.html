@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
++0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <title>DOM - Lista de Itens</title>
+</head>
+
+<body>
+    <header id="main-header" class="bg-success text-white p-4 mb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 id="header-title">Lista de Itens</h1>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <input type="text" class="form-control" id="filter" placeholder="Busca item..." />
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div id="main" class="card card-body">
+            <h2 class="title">Adicionar Item</h2>
+            <form id="addForm" class="form-control mb-3">
+                <div class="row">
+                    <div class="col-4">
+                        <input type="text" class="form-control mr-2" id="item" />
+                    </div>
+                    <div class="col-2">
+                        <input type="submit" class="btn btn-dark" value="Add" />
+                    </div>
+                </div>
+            </form>
+            <h2 class="title">Minha lista</h2>
+            <ul id="items" class="list-group">
+                <li class="list-group-item">
+                    Arroz
+                    <button class="btn btn-danger btn-sm float-end delete">X</button>
+                </li>
+                <li class="list-group-item">
+                    Feijão
+                    <button class="btn btn-danger btn-sm float-end delete">X</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+            let form = document.getElementById('addForm');
+            let itemList = document.getElementById('items');
+            let filter = document.getElementById('filter');
+
+            // Form submit event 
+            form.addEventListener('submit', addItem);
+            // Delete event 
+            itemList.addEventListener('click', removeItem);
+            // Filter event 
+            filter.addEventListener('keyup', buscarItems);
+            // Adiciona item 
+            function addItem(e) {
+                e.preventDefault();
+                // Pega o valor do <input> 
+                let newItem = document.getElementById('item').value;
+                if (newItem.length > 1) {
+                // Cria novo elemento <li> 
+                let li = document.createElement('li');
+                // Adiciona classe 
+                li.className = 'list-group-item';
+                // Adiciona o texto no novo elemento com o valor armazenado no newItem 
+                li.appendChild(document.createTextNode(newItem));
+                // Cria o elemento botão para deletar um item 
+                let deleteBtn = document.createElement('button');
+                // Adiciona classes para o botão de deletar 
+                deleteBtn.className = 'btn btn-danger btn- float-end delete';
+                // Acrescenta o texto no novo elemento 
+                deleteBtn.appendChild(document.createTextNode('X'));
+                // Acrescenta o botão no elemento li 
+                li.appendChild(deleteBtn);
+                itemList.appendChild(li); // Adiciona o novo item na lista 
+                form.reset(); // Limpa o formulário
+            } else {
+                return false;
+            }
+        }
+            // Função Remove Item 
+            function removeItem(e) {
+                if (e.target.classList.contains('delete')) {
+                    let li = e.target.parentElement;
+                    itemList.removeChild(li);
+                }
+            }
+            // Função buscarItems 
+            function buscarItems(e) {
+                // Converte o texto digitado para minúsculo 
+                let text = e.target.value.toLowerCase();
+                // Busca todos os itens 
+                let items = itemList.getElementsByTagName('li');
+                // Converte os itens para array 
+                Array.from(items).forEach(function (item) {
+                    // Busca o primeiro item da lista 
+                    let itemName = item.firstChild.textContent;
+                    // Busca o item na lista que começa com o mesmo texto digitado 
+                    if (itemName.toLowerCase().indexOf(text) != -1) {
+                        item.style.display = 'block'; // exibe o item 
+                    } else {
+                        item.style.display = 'none'; // oculta o item 
+                    }
+                });
+            }
+    </script>
+</body>
+
+</html>

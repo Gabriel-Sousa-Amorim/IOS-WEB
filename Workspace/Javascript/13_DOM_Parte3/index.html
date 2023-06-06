@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            border: "2px solid #000";
+        }
+        ul li {
+            list-style: none ;
+        }
+    </style>
+</head>
+<body>
+    <section id="bg-container" name="bg-container">
+        <div>
+            <p class="p">Hello World</p>
+            <p class="p">Hello World</p>
+            <p class="p">Hello World</p>
+            <p class="p">Hello World</p>
+        </div>
+        
+        <ul id="UlList">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        
+        <div>
+            <p class="p">Hello World</p>
+            <p class="p">Hello World</p>
+            <p class="p">Hello World</p>
+            <p class="p">Hello World</p>
+        </div>
+    </section>
+    <button onmouseenter="bgchange('#224')" onmouseout="bgchange('#447')">Botão</button>
+    <button onclick="fontWeight()">Botão</button>
+    <button onclick="Zebrado()">Botão</button>
+    <button onclick="borda()">Botão</button>
+    <button onclick="remove()">Botão</button>
+    <button onclick="Adicionar()">Botão</button>
+<script>
+    
+    //Muda a cor e põe uma borda inferior
+    let section = document.getElementById("bg-container");
+    function bgchange(x) {
+        section.style.background =  x;  
+    };
+    
+    
+    //Define o Font weight dos paragrafos para 900 
+    function fontWeight() {
+        let paragraph = document.getElementsByClassName("p");
+        let fontWeight = Array.prototype.map.call(paragraph, i => i.style.fontWeight = "900");
+    }
+    
+    var UlList = document.getElementsByTagName("li");
+    function Zebrado() {
+        for (i = 0; i < UlList.length; i++) {
+            if (i % 2 == 0) {
+                UlList[i].style.backdropFilter = "brightness(125%)";
+            } else { 
+                UlList[i].style.backdropFilter = "brightness(150%)";
+            }
+        }
+    }
+    function borda() {
+        let bgcontainer = document.getElementsByName("bg-container");
+        bgcontainer[0].style.borderBottom = "1px solid #000";
+    }
+    function remove() {
+        let UltimoItem = UlList[UlList.length-1];
+        
+        UltimoItem.remove()
+    }
+    function Adicionar() {
+        let NovoItem = document.createElement("li");
+        NovoItem.textContent = "Elemento Recuperado";
+        let list = document.getElementById("UlList");
+        list.insertBefore(NovoItem, list.children[0]);
+        Zebrado()
+    }
+    
+    
+    
+</script>
+</body>
+</html>

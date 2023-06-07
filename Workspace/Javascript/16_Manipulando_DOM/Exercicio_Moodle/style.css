@@ -1,0 +1,73 @@
+body {
+    margin: 0px;
+}
+section {
+    height: 100vh;
+}
+.Image {
+    height: 60%;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+    opacity: -1;
+    display: none;
+}
+#Imagem-1 {
+    background-image: url("https://occ-0-300-1007.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABU7EveKK0X_Qpsk1MZU3BjfhAezzvGkMs3wuUsHsQYhPTew0rQcgPRyevBNHrdEK0I8wBXutF-5n8ySvwruWOuW0SeOZS5uAO0bd.jpg?r=9c5");
+}
+#Imagem-2 {
+    background-image: url("https://www.tenhomaisdiscosqueamigos.com/wp-content/uploads/2020/04/the-midnight-gospel.jpg");
+}
+#Imagem-3 {
+    background-image: url("https://sm.ign.com/t/ign_br/screenshot/default/the-midnight-gospel-netflix-0420-1400x800-4_thxd.1200.jpg");
+}
+#Imagem-4 {
+    background-image: url("https://1.bp.blogspot.com/-KFgDPY67gKM/XtOS5kkvEHI/AAAAAAAAVtA/OGqKq_acHuUUcyD0kBfo0HKWl5PMfuEnACLcBGAsYHQ/s1600/TheMidnightGospel7.jpg");
+}
+#Imagem-5 {
+    background-image: url("https://trecobox.com.br/wp-content/uploads/2020/04/the-midnight-gospel-capa-trecobox.jpg");
+}
+#Imagem-6 {
+    background-image: url("https://darkside.blog.br/wp-content/uploads/2020/05/midnight-gospel-600x309.jpg");
+}
+.Image article {
+    background: #eee;
+    padding: 10px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.Atual {
+    z-index: 1;
+    opacity: 1;
+    display: flex;
+}
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.buttonContainer>button {
+    border: none;
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    color: aliceblue;
+    cursor: pointer;
+    backdrop-filter: invert(0) brightness(50%);
+    font-size: xx-large;
+    border-radius: 90%;
+    transition:all 0.7s ;
+}
+.buttonContainer>button:hover {
+    backdrop-filter: invert(1);
+}
+.button-left {
+    left: 5px;
+}
+.button-right {
+    right: 5px;
+
+}

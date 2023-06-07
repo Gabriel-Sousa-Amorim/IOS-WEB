@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div id="Imagem-1" class="Image Atual">
+            <article>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo maxime exercitationem, saepe ipsam
+                temporibus accusantium iure fuga ea quia dolor vitae aliquam, quaerat similique laborum natus. Doloribus
+                assumenda aliquid nihil.
+            </article>
+        </div>
+        <div id="Imagem-2" class="Image">
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eius asperiores eligendi doloribus
+                illum dolorem. Dolorum nulla quam quae nihil reprehenderit! Tempore quaerat neque consequatur nam earum
+                dolor, libero debitis.
+            </article>
+        </div>
+        <div id="Imagem-3" class="Image">
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eius asperiores eligendi doloribus
+                illum dolorem. Dolorum nulla quam quae nihil reprehenderit! Tempore quaerat neque consequatur nam earum
+                dolor, libero debitis.
+            </article>
+        </div>
+        <div id="Imagem-4" class="Image">
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eius asperiores eligendi doloribus
+                illum dolorem. Dolorum nulla quam quae nihil reprehenderit! Tempore quaerat neque consequatur nam earum
+                dolor, libero debitis.
+            </article>
+        </div>
+        <div id="Imagem-5" class="Image">
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eius asperiores eligendi doloribus
+                illum dolorem. Dolorum nulla quam quae nihil reprehenderit! Tempore quaerat neque consequatur nam earum
+                dolor, libero debitis.
+            </article>
+        </div>
+        <div id="Imagem-6" class="Image">
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eius asperiores eligendi doloribus
+                illum dolorem. Dolorum nulla quam quae nihil reprehenderit! Tempore quaerat neque consequatur nam earum
+                dolor, libero debitis.
+            </article>
+        </div>
+        <div class="buttonContainer">
+            <button id="button-1" class="button-left">&lt;</button>
+            <button id="button-2" class="button-right">&gt;</button>
+        </div>
+    </section>
+    <section>
+        <p>Midnight Gospel</p>
+    </section>
+    <script>
+        const arr = ["Imagem-1", "Imagem-2", "Imagem-3", "Imagem-4", "Imagem-5", "Imagem-6"]
+        let i = 0
+        function RightArrow() {
+            if (i < arr.length - 1) {
+                document.getElementById(arr[i]).classList.remove("Atual")
+                document.getElementById(arr[i+1]).classList.add("Atual")
+                return ++i;
+            } else {
+                console.log(arr[arr.length - 1])
+                document.getElementById(arr[arr.length - 1]).classList.remove("Atual")
+                document.getElementById(arr[0]).classList.add("Atual")
+                return i = 0;
+            }
+        }
+        function LeftArrow() {
+            if (i < 0) {
+                document.getElementById(arr[0]).classList.remove("Atual")
+                document.getElementById(arr[arr.length -1]).classList.add("Atual")
+                return --i;
+            } else {
+                document.getElementById(arr[i]).classList.remove("Atual")
+                document.getElementById(arr[--i]).classList.add("Atual")
+                return --i;
+            }
+        }
+        document.getElementById("button-1").addEventListener("click", LeftArrow, true)
+        document.getElementById("button-2").addEventListener("click", RightArrow, true)
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
+awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-
+Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==
+" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #333;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .slider {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .slide.atual {
+            opacity: 1;
+        }
+
+        .slide .content {
+            position: absolute;
+            bottom: 70px;
+            left: -600px;
+            opacity: 0;
+            width: 600px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+            padding: 35px;
+        }
+
+        .slide .content h1 {
+            margin-bottom: 10px;
+        }
+
+        .slide.atual .content {
+            opacity: 1;
+            transform: translateX(600px);
+            transition: all 0.7s ease-in-out 0.3s;
+        }
+
+        .buttons button#next {
+            position: absolute;
+            top: 40%;
+            right: 15px;
+        }
+
+        .buttons button#prev {
+            position: absolute;
+            top: 40%;
+            left: 15px;
+        }
+
+        .buttons button {
+            font-size: 2rem;
+            border: 2px solid #fff;
+            background-color: transparent;
+            color: #fff;
+            cursor: pointer;
+            padding: 13px 15px;
+            border-radius: 50%;
+            outline: none;
+        }
+
+        .buttons button:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        @media (max-width: 500px) {
+            .slide .content {
+                bottom: -300px;
+                left: 0;
+                width: 100%;
+            }
+
+            .slide.atual .content {
+                transform: translateY(-300px);
+            }
+        }
+
+        .slide:nth-child(4) {
+            background: url('https://source.unsplash.com/yXpA_eCbtzI/1600x900') no-repeat center top/cover;
+        }
+
+        .slide:nth-child(5) {
+            background: url('https://source.unsplash.com/ULmaQh9Gvbg/1600x900') no-repeat center top/cover;
+        }
+
+        .slide:nth-child(6) {
+            background: url('https://source.unsplash.com/ggZuL3BTSJU/1600x900') no-repeat center center/cover;
+        }
+
+        @media (max-width: 500px) {
+            .slide .content {
+                bottom: -300px;
+                left: 0;
+                width: 100%;
+            }
+
+            .slide.atual .content {
+                transform: translateY(-300px);
+            }
+        }
+
+        /* Backgorund Images */
+
+        .slide:first-child {
+            background: url('https://source.unsplash.com/RyRpq9SUwAU/1600x900') no-repeat center top/cover;
+        }
+
+        .slide:nth-child(2) {
+            background: url('https://source.unsplash.com/Nyvq2juw4_o/1600x900') no-repeat center top/cover;
+        }
+
+        .slide:nth-child(3) {
+            background: url('https://source.unsplash.com/TMOeGZw9NY4/1600x900') no-repeat center top/cover;
+        }
+    </style>
+
+    <title>Apresentador de Imagens</title>
+
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slide atual">
+            <div class="content">
+                <h1>Slide Um</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Necessitatibus quaerat quidem beatae alias
+                    ducimus hic officia velit illum dolores omnis.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <h1>Slide Dois</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+                    officiis repellendus facilis odio
+                    quos quas amet labore voluptas nihil ipsam.</p>
+                /div>
+            </div>
+
+            <div class="slide">
+                <div class="content">
+                    <h1>Slide Três</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis
+                        alias aut excepturi id
+                        reprehenderit vero a odit dolor quia laudantium.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="content">
+                    <h1>Slide Quatro</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+                        expedita nulla eius dolores amet
+                        recusandae ad molestias accusantium veniam iste.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="content">
+                    <h1>Slide Cinco</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+                        expedita nulla eius dolores amet
+                        recusandae ad molestias accusantium veniam iste.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="content">
+                    <h1>Slide Seis</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+                        expedita nulla eius dolores amet
+                        recusandae ad molestias accusantium veniam iste.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="prev"><i class="fas fa-arrow-left"></i></button>
+            <button id="next"><i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <script>
+            // Busca todos os elementos com a classe slide 
+            const slides = document.querySelectorAll('.slide');
+            // Busca o botão de avançar 
+            const next = document.querySelector('#next');
+            // Busca o botão de retroceder 
+            const prev = document.querySelector('#prev');
+            // Habilita ou desabilita a transição automática entre slides 
+            const auto = false; // Auto scroll 
+            // Intervalo entre transições 
+            const intervalTime = 2000;
+            // Tempo para exibir o slide na transição automática 
+            let slideInterval;
+            // Função para avançar para o próximo slide 
+            const nextSlide = () => {
+                // Busca o slide com a classe atual 
+                const atual = document.querySelector('.atual');
+                // Remove a classe atual do slide 
+                atual.classList.remove('atual');
+                // Verifica ser existe o próximo slide 
+                if (atual.nextElementSibling) {
+                    // Adiciona a classe atual no próximo slide 
+                    atual.nextElementSibling.classList.add('atual');
+                } else {
+                    // Adiciona a classe atual no primeiro slide 
+                    slides[0].classList.add('atual');
+                }
+
+                setTimeout(() => atual.classList.remove('atual'));
+            };
+            // Função para voltar para o slide anterior 
+            const prevSlide = () => {
+                // Busca o slide com a classe atual 
+                const atual = document.querySelector('.atual');
+                // Remove a classe atual do slide 
+                atual.classList.remove('atual');
+                // Verifica se existe o slide anterior 
+                if (atual.previousElementSibling) {
+                    // Adiciona a classe atual no slide anterior 
+                    atual.previousElementSibling.classList.add('atual');
+                } else {
+                    // Adiciona a classe atual no último slide 
+                    slides[slides.length - 1].classList.add('atual');
+                }
+                setTimeout(() => atual.classList.remove('atual'));
+            };
+            // Eventos para os botões 
+            next.addEventListener('click', (e) => {
+                nextSlide(); // Invoca a função próximo slide 
+                // Executa a transição entre slides 
+                if (auto) {
+                    clearInterval(slideInterval);
+                    slideInterval = setInterval(nextSlide, intervalTime);
+                }
+            });
+
+            prev.addEventListener('click', (e) => {
+                prevSlide(); // Invoca a função slide anterior 
+                // Executa a transição entre slides 
+                if (auto) {
+                    clearInterval(slideInterval);
+                    slideInterval = setInterval(nextSlide, intervalTime);
+                }
+            });
+            // Caso a transição automática entre slides esteja habilitada 
+            if (auto) {
+                // Mostra o próximo slide automaticamente depois de um tempo 
+                slideInterval = setInterval(nextSlide, intervalTime);
+            }
+        </script>
+</body>
+
+</html>

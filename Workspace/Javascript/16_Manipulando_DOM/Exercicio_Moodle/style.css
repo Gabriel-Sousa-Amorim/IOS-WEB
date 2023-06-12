@@ -9,6 +9,8 @@ section {
     z-index: 0;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
     display: flex;
     align-items: last baseline;
     justify-content: center;
@@ -34,10 +36,12 @@ section {
     background-image: url("https://darkside.blog.br/wp-content/uploads/2020/05/midnight-gospel-600x309.jpg");
 }
 .Image article {
-    background: #eee;
+    flex: 1;
+    backdrop-filter: brightness(25%);
+    color: #FFF;
     padding: 10px;
-    text-align: justify;
-    text-justify: inter-word;
+    overflow-wrap: break-word;
+    font-size: 1vw;
 }
 .Atual {
     z-index: 1;
@@ -52,17 +56,19 @@ section {
 .buttonContainer>button {
     border: none;
     position: absolute;
-    top: 50%;
+    top: 30%;
     background-color: transparent;
     color: aliceblue;
     cursor: pointer;
-    backdrop-filter: invert(0) brightness(50%);
+    backdrop-filter: invert(1);
     font-size: xx-large;
-    border-radius: 90%;
+    border-radius: 100vh;
     transition:all 0.7s ;
+    font-size: 1.5vw;
 }
 .buttonContainer>button:hover {
-    backdrop-filter: invert(1);
+    backdrop-filter: invert;
+    color: turquoise;
 }
 .button-left {
     left: 5px;

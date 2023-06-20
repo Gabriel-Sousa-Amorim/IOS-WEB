@@ -1,0 +1,31 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.App-header {
+  padding:20px;
+  text-align: center;
+  background-color: #202020;
+  color: #dfdfdf;
+}
+.App-nav {
+  padding:20px;
+  text-align: center;
+  border-block: 2px solid #dfdfdf;
+  background-color: #070707;
+  color: #dfdfdf;
+}
+.App-nav>ul li {
+  list-style: none;
+  font-size: 20px;
+  text-decoration: underline;
+}
+.App-main {
+  background-color: #303030;
+  height: 100vh;
+  padding: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+  color: #dfdfdf;
+}

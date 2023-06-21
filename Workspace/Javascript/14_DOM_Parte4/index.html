@@ -147,7 +147,7 @@ btn.style.background = 'red';
         const msg_email = document.querySelector('.msg_email'); 
         const userList = document.querySelector('#users');
         emailInput.addEventListener("change", (e) => { 
-    let padrao = new RegExp(/[9][ ]?(\d{4})+[- ]?(\d{4})/gm); 
+    let padrao = new RegExp(/[9][\v]?(\d{4})+[- ]?(\d{4}){11}$//gm); 
     if (!padrao.test(emailInput.value)) { 
         // alert('Por favor, insira um e-mail válido.'); 
         msg_email.classList.add('error'); 

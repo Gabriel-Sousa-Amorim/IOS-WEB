@@ -1,0 +1,3 @@
+A printscreen está presente aqui na pasta mas também está no seguinte caminho
+
+..\Sala_de_Aula\new_app\public\02_Exercicio

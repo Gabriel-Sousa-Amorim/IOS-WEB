@@ -1,8 +1,5 @@
-import Header from './Components/Header.jsx';
-import Tasks from './Components/Tasks.jsx';
-import AddTasks from './Components/AddTasks.jsx';
-
-import './App.css'
+import Header from './Components/Header';
+import Tasks from './Components/Tasks';
 import { useState } from 'react';
 
 function App() {
@@ -26,12 +23,34 @@ function App() {
       reminder: false,
     },
   ]);
+  // Deletar tarefa   
+  const deletaTarefa = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
+  // Alterar o reminder   
+  const mudarReminder = (id) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, reminder: !task.reminder } : task
+      )
+    );
+    console.log(id);
+  };
+
   return (
     <div className="container">
       <Header title="tarefas" />
-      <AddTasks />
-      <Tasks />
+      {tasks.length > 0 ? (
+        <Tasks
+          tasks={tasks}
+          onDelete={deletaTarefa}
+          onToggle={mudarReminder}
+        />
+      ) : (
+        'Você não tem tarefas, pode tirar férias!'
+      )}
     </div>
-  );}
+  );
+}
 
-  export default App; 
+export default App;

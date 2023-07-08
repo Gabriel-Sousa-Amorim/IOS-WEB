@@ -1,0 +1,5 @@
+O site analisado: https://www.marvel.com/
+Conclusões sobre o site.
+A forma que utilizaram o framework REACT no site, foi uma forma avançada e bonita, tendo
+um layout agradavel. Podendo ser uma ótima ferramenta para auxiliar os programador,com os
+recursos do node_modules, além de outros recursos.

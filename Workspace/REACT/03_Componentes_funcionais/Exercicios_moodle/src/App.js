@@ -5,8 +5,8 @@ import Sobre from './Components/Sobre.jsx';
 function App() {
   return (
     <div className='App'>
-    <BoasVindas nome="Rafael"></BoasVindas>
-    <Sobre></Sobre>
+    <BoasVindas nome="Rafael"/>
+    <Sobre/>
     </div>
   );
 }

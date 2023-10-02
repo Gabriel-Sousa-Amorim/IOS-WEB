@@ -10,7 +10,7 @@ Pasta contendo arquivos e materiais do curso noturno de WEB que incluí HTML, CS
 function  Agradecimentos() {
     let profs = ["Rafael", "Heloísa"];
       for (var i in profs) {
-    console.log(`Obrigado Prof ${profs[i]}`);
+	console.log(`Obrigado Prof ${profs[i]}`);
         }
     };
       Agradecimentos();

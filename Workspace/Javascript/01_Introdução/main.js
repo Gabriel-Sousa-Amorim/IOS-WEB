@@ -14,7 +14,7 @@ console.log(str);
 document.getElementById('string').innerHTML = str;
 
 //Var Bolleana
-var bollean = True;
+var bollean = true;
 console.log(bollean);
 document.getElementById('Bollean').innerHTML = bollean;
 

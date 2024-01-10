@@ -1,0 +1,14 @@
+       body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: rgb(206, 206, 206);
+        }
+        #Resultado {
+            display: block;
+            background: rgb(248, 248, 248);
+            box-shadow: inset 0px 0px 10px rgb(230, 230, 230);
+        }
+        #Resultado p {
+            padding: 2px;
+        }

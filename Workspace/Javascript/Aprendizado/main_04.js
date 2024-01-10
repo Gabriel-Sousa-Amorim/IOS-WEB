@@ -1,0 +1,53 @@
+        var input = prompt("Insira o valor que deseja multiplicar:");
+        var multiplo = prompt("Insira o valor de quantas vezes deseja multiplicar");
+        if (parseInt(multiplo) >= 1) {
+            for(i=0; i <= parseInt(multiplo) ;++i) {
+            var result =+ `${parseInt(input)} x ${i} = ${parseInt(input) * i}`;
+            document.getElementById("p").innerHTML = result;
+        };
+
+    } else {
+        console.error("Insira valores válidos");
+    };
+
+//Estações Aprendizado
+var mes = 1;
+switch (mes){
+    case 12 || 1 || 2 || 3:
+        console.log("Verão");
+        break;
+    case 4 || 5 || 6 :
+        console.log("Outono");
+        break;
+    case 7 || 8 || 9 :
+        console.log("Inverno");
+        break;
+        case 10 || 11 :
+        console.log("Primavera");
+        break;
+    default:
+        console.log("Mês não valido")
+        break;
+    };
+    
+    //Estudo Classe
+    class aluno {
+        constructor(name, idade, media, ano) {
+            this.name = name;
+            this.idade = idade;
+            this.media = media;
+            this.ano = ano;
+        }
+    }
+    var Ana = new aluno("Ana", 17, 8, "2ºB");
+    var Bruno = new aluno("Bruno", 16, 6, "2ºC");
+    var Veronica = new aluno("Veronica", 16, 9, "2ºC");
+    var Marta = new aluno("Marta", 15, 5, "3ºC");
+    var Brenno = new aluno("Brenno", 19, 6, "3ºC");
+    var Maria = new aluno("Maria", 14, 4, "3ºC");
+    console.table(Marta);
+    console.table(Bruno);
+    console.table(Veronica);
+    console.table(Marta);
+    console.table(Brenno);
+    console.table(Maria);

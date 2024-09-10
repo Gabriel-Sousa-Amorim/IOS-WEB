@@ -2,18 +2,16 @@
 
 <h1 align="center"> Instituto Oportunidade Social </h1>
 
-Pasta contendo arquivos e materiais do curso noturno de WEB que incluí HTML, CSS, JS, React e GIT incluindo aulas, apostilas e exercicios. Este repositório contém as atividades feitas por Gabriel Sousa durante o período do curso.
+Repositório que contém conteúdos do curso de Web Development do **Instituto Oportunidade Social** que incluí materiais de HTML-5, Git/Github, CSS-3, Javascript, React sendo aulas, apostilas e exercicios.
 
-
-
-```javascript
-function Agradecimentos() {
-    let profs = ["Rafael", "Heloísa"];
-      for (var i in profs) {
-	console.log(`Obrigado Prof ${profs[i]}`);
-        }
-    };
-      Agradecimentos();
+```js
+"use strict";
+function Agradecimentos(profs) {
+    for (let i in profs) {
+        console.log(`Obrigado Prof ${profs[i]}`);
+    }
+}
+Agradecimentos(["Rafael", "Heloísa"]);
 ```
 
 ***Output:***
